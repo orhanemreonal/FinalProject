@@ -5,26 +5,14 @@ using DataAccess.Concrete.InMemory;
 //SOLID 
 //Open Closed Principle
 
-ProductTest();
+//ProductTest();
 
 //CategoryTest();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 static void ProductTest()
-{
+{                                                       //101
     ProductManager productManager = new ProductManager(new EfProductDal());
 
     var result = productManager.GetProductDetails();
@@ -42,11 +30,11 @@ static void ProductTest()
     }
 }
 
-static void CategoryTest()
-{
-    CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
-    foreach (var category in categoryManager.GetAll())
-    {
-        Console.WriteLine(category.CategoryName);
-    }
-}
+//static void CategoryTest()
+//{
+//    CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
+//    foreach (var category in categoryManager.GetAll())
+//    {
+//        Console.WriteLine(category.CategoryName);
+//    }
+//}

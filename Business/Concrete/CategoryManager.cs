@@ -11,22 +11,31 @@ namespace Business.Concrete
 {
     public class CategoryManager : ICategoryService
     {
-        ICategoryDal _categoryDal;
+        //ICategoryDal _categoryDal;
 
-        public CategoryManager(ICategoryDal categoryDal)
-        {
-            _categoryDal = categoryDal;
-        }
+        //public CategoryManager(ICategoryDal categoryDal)
+        //{
+        //    _categoryDal = categoryDal;
+        //}
 
+        //public List<Category> GetAll()
+        //{
+        //    //İş Kodları
+        //    return _categoryDal.GetAll();
+        //}
+
+        //public Category GetById(int categoryId)
+        //{
+        //    return _categoryDal.Get(c=>c.CategoryId == categoryId);
+        //}
         public List<Category> GetAll()
         {
-            //İş Kodları
-            return _categoryDal.GetAll();
+            throw new NotImplementedException();
         }
 
         public Category GetById(int categoryId)
         {
-            return _categoryDal.Get(c=>c.CategoryId == categoryId);
+            throw new NotImplementedException();
         }
     }
 }

@@ -19,12 +19,12 @@ namespace Business.Concrete
         IProductDal _productDal;
         public ProductManager(IProductDal productDal)
         {
-            _productDal = productDal;
+           _productDal = productDal;
         }
 
         public IResult Add(Product product)
         {
-
+            
             if (product.ProductName.Length < 2)
             {
                 //magic strings - stringleri ayrı ayrı yazmak
@@ -39,7 +39,7 @@ namespace Business.Concrete
         {
             //İş Kodları
             //Yetkisi var mı ?
-            if (DateTime.Now.Hour == 22)
+            if (DateTime.Now.Hour == 13)
             {
                 return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);
                 
