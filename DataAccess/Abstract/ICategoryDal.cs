@@ -1,21 +1,15 @@
-﻿using Core.DataAccess;
-using Entities.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Entities.Concrete;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
     public interface ICategoryDal
     {
-        //List<Category> GetAll(Expression<Func<T, bool>> filter = null);
-        //T Get(Expression<Func<T, bool>> filter);
-        //void Add(T entity);
-        //void Update(T entity);
-        //void Delete(T entity);
+        List<Category> GetAll(Expression<Func<Category, bool>> filter = null);
+        Category Get(Expression<Func<Category, bool>> filter);
+        void Add(Category entity);
+        void Update(Category entity);
+        void Delete(Category entity);
 
     }
 }

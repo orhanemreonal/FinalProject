@@ -1,39 +1,32 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Business.Concrete
 {
     public class CategoryManager : ICategoryService
     {
-        //ICategoryDal _categoryDal;
+        ICategoryDal _categoryDal;
 
-        //public CategoryManager(ICategoryDal categoryDal)
-        //{
-        //    _categoryDal = categoryDal;
-        //}
-
-        //public List<Category> GetAll()
-        //{
-        //    //İş Kodları
-        //    return _categoryDal.GetAll();
-        //}
-
-        //public Category GetById(int categoryId)
-        //{
-        //    return _categoryDal.Get(c=>c.CategoryId == categoryId);
-        //}
-        public List<Category> GetAll()
+        public IResult Add(Category category)
         {
             throw new NotImplementedException();
         }
 
-        public Category GetById(int categoryId)
+        public IDataResult<List<Category>> GetAll()
+        {
+            var result = _categoryDal.GetAll();
+            return new SuccessDataResult<List<Category>>(result);
+        }
+
+        public IDataResult<Category> GetById(int categoryId)
+        {
+            var result = _categoryDal.Get(c => c.CategoryId == categoryId);
+            return new SuccessDataResult<Category>(result);
+        }
+
+        public IResult Update(Category category)
         {
             throw new NotImplementedException();
         }

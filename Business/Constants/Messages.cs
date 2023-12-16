@@ -1,11 +1,4 @@
-﻿using Entities.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Business.Constants
+﻿namespace Business.Constants
 {
     public static class Messages
     {
@@ -13,5 +6,9 @@ namespace Business.Constants
         public static string ProductNameInvalid = "Ürün ismi geçersiz";
         public static string MaintenanceTime = "Sistem Bakımda";
         public static string ProductsListed = "Ürünler Listelendi";
+        public static string ProductCountError = "Ürün Eklenemedi.Kategori Dolu";
+        public static string ProductUpdated = "Ürün Güncellendi";
+        public static string ProductIsNotUnique = "Bu isimde Ürün Mevcut";
+        public static string CategoryLimitExceed = "Kategori Limiti Aşıldığı için yeni ürün eklenemiyor";
     }
 }
